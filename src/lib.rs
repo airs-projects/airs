@@ -8,6 +8,9 @@ pub use airs_asr as asr;
 #[cfg(feature = "audio")]
 pub use airs_audio as audio;
 
+#[cfg(feature = "gui")]
+pub use airs_gui as gui;
+
 #[cfg(feature = "hash")]
 pub use airs_hash as hash;
 
