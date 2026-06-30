@@ -6,4 +6,24 @@ description = "All In Rust"
 license = "Apache-2.0"
 readme = "README.md"
 
+[features]
+default = []
+full = ["audio", "hash", "image", "asr", "tts"]
+
+audio = ["dep:airs-audio"]
+hash = ["dep:airs-hash"]
+image = ["dep:airs-image"]
+
+asr = ["dep:airs-asr", "audio"]
+asr-whisper = ["asr", "airs-asr/whisper"]
+asr-zipformer = ["asr", "airs-asr/zipformer"]
+
+tts = ["dep:airs-tts", "audio"]
+tts-kokoro = ["tts", "airs-tts/kokoro"]
+
 [dependencies]
+airs-asr = { path = "../airs-asr", version = "0.1.0", optional = true, default-features = false }
+airs-audio = { path = "../airs-audio", version = "0.1.0", optional = true }
+airs-hash = { path = "../airs-hash", version = "0.1.0", optional = true }
+airs-image = { path = "../airs-image", version = "0.1.0", optional = true }
+airs-tts = { path = "../airs-tts", version = "0.1.0", optional = true, default-features = false }
