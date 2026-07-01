@@ -65,6 +65,7 @@ dependencies = [
  "airs-hash",
  "airs-image",
  "airs-tts",
+ "airs-window",
 ]
 
 [[package]]
@@ -142,6 +143,16 @@ dependencies = [
  "thiserror 2.0.18",
  "tokio",
  "tokio-stream",
+]
+
+[[package]]
+name = "airs-window"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "raw-window-handle",
+ "wgpu",
+ "winit",
 ]
 
 [[package]]

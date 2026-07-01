@@ -8,12 +8,13 @@ readme = "README.md"
 
 [features]
 default = []
-full = ["audio", "hash", "image", "asr", "tts", "gui"]
+full = ["audio", "hash", "image", "asr", "tts", "gui", "window"]
 
 audio = ["dep:airs-audio"]
 hash = ["dep:airs-hash"]
 image = ["dep:airs-image"]
 gui = ["dep:airs-gui"]
+window = ["dep:airs-window"]
 
 asr = ["dep:airs-asr", "audio"]
 asr-whisper = ["asr", "airs-asr/whisper"]
@@ -29,3 +30,4 @@ airs-gui = { path = "../airs-gui", version = "0.1.0", optional = true }
 airs-hash = { path = "../airs-hash", version = "0.1.0", optional = true }
 airs-image = { path = "../airs-image", version = "0.1.0", optional = true }
 airs-tts = { path = "../airs-tts", version = "0.1.0", optional = true, default-features = false }
+airs-window = { path = "../airs-window", version = "0.1.0", optional = true }

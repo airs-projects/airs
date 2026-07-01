@@ -20,6 +20,9 @@ pub use airs_image as image;
 #[cfg(feature = "tts")]
 pub use airs_tts as tts;
 
+#[cfg(feature = "window")]
+pub use airs_window as window;
+
 #[cfg(test)]
 mod tests {
     use super::*;
